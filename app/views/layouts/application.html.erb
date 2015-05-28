@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+  <%= stylesheet_link_tag "application", '//fonts.googleapis.com/css?family=Patrick+Hand+SC|Bangers|Happy+Monkey', :media => "all" %>
   <head>
     <%= favicon_link_tag 'favicon.ico' %>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -15,7 +16,6 @@
       <%= render 'layouts/navigation' %>
     </header>
     <main role="main">
-      <%= image_tag("wall2.jpg", id: "bg") %>
       <%= render 'layouts/messages' %>
       <%= yield %>
     </main>

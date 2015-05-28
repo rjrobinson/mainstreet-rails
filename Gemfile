@@ -14,6 +14,7 @@ gem 'simple_form'
 gem 'foundation-rails'
 gem 'devise'
 gem 'owlcarousel-rails'
+gem 'rails_12factor'
 
 # DEVELOPMENT AND TEST
 group :development, :test do

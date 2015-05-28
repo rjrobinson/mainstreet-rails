@@ -1,9 +1,7 @@
-/*===========================
-START // General Page/Layout
-============================*/
-
-@import url(http://fonts.googleapis.com/css?family=Patrick+Hand+SC|Bangers|Happy+Monkey);
-/* LAYOUT */
+* {
+    font-family: "Bangers", sans-serif;
+    // color: #222;
+}
 
 #bg {
     position: fixed;
