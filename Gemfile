@@ -13,11 +13,12 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'simple_form'
 gem 'foundation-rails'
 gem 'devise'
-
+gem 'owlcarousel-rails'
 
 # DEVELOPMENT AND TEST
 group :development, :test do
 	gem 'byebug'
 	gem 'web-console', '~> 2.0'
 	gem 'spring'
+	gem 'rails_layout'
 end
