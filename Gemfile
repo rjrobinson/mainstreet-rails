@@ -18,8 +18,33 @@ gem 'rails_12factor'
 
 # DEVELOPMENT AND TEST
 group :development, :test do
+	gem 'better_errors'
 	gem 'byebug'
-	gem 'web-console', '~> 2.0'
-	gem 'spring'
+	gem 'capybara'
+	gem 'factory_girl_rails'
+	gem 'faker'
+	gem 'launchy'
+	gem 'meta_request'
 	gem 'rails_layout'
+	gem 'rspec-rails'
+	gem 'spring'
+	gem 'web-console', '~> 2.0'
 end
+
+
+# group :development, :test do
+# 	gem 'better_errors'
+# 	# gem 'binding_of_caller'
+# 	gem 'capybara'
+# 	gem 'factory_girl_rails'
+# 	# gem 'growl'
+# 	# gem 'guard-rspec'
+# 	# gem 'guard-spring'
+# 	gem 'meta_request'
+# 	gem 'pry-rails'
+# 	# gem 'rb-fsevent' if `uname` =~ /Darwin/
+# 	gem 'rspec-rails'
+# 	# gem 'spring-commands-rspec'
+# 	# gem 'terminal-notifier-guard'
+# 	gem 'launchy'
+# end

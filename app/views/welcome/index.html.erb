@@ -1,30 +1,14 @@
 <div class="row ">
   <div class="large-3 columns ">
-    <ul>
-      <li>
-        <h1>
-          <%= image_tag("MSLogo.jpg", id: "logo") %>
-        </h1>
-      </li>
-      <hr/>
-      <li>
-        <h4>
-          Hours of operation
-        </h4>
-        <ul>
-          <li>Monday - Thursday: 12 - 7</li>
-          <li>Friday: 10 - 8</li>
-          <li> Saturday: 8am - 5 </li>
-        </ul>
-      </li>
-    </ul>
+    <%= render 'welcome/logo'%>
   </div>
-  <%= render 'welcome/info_tabs'%>
+  <div>
+    <%= render 'welcome/info_tabs'%>
+  </div>
 </div>
 <!-- SLIDER  -->
 <div class="row">
   <div class="large-12 columns">
-    <h1> NEW INFO BELOW</h1>
     <hr/>
   </div>
 </div>
