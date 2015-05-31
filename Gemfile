@@ -29,6 +29,8 @@ group :development, :test do
 	gem 'rspec-rails'
 	gem 'spring'
 	gem 'web-console', '~> 2.0'
+	gem 'shoulda-matchers'
+	gem 'valid_attribute'
 end
 
 
