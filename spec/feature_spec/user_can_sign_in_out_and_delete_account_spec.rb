@@ -5,8 +5,11 @@ feature 'authenticated user may sign in', %Q(
 	I want to ...
 ) do
 
+
+	user = FactoryGirl.create(:user)
+	user.confirm!
+
 	scenario 'sign in' do
-		user = FactoryGirl.create(:user)
 
 		visit root_path
 		click_link 'Sign in'
@@ -19,7 +22,6 @@ feature 'authenticated user may sign in', %Q(
 	end
 
 	scenario 'sign out' do
-		user = FactoryGirl.create(:user)
 
 		visit root_path
 		click_link 'Sign in'
@@ -34,7 +36,6 @@ feature 'authenticated user may sign in', %Q(
 	end
 
 	scenario 'delete account' do
-		user = FactoryGirl.create(:user)
 
 		visit root_path
 		click_link 'Sign in'
@@ -50,7 +51,7 @@ feature 'authenticated user may sign in', %Q(
 	end
 
 	scenario 'user changes password' do
-		user = FactoryGirl.create(:user)
+
 		visit new_user_session_path
 		fill_in 'Email', with: user.email
 		fill_in 'Password', with: user.password

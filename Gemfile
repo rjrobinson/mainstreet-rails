@@ -25,12 +25,14 @@ group :development, :test do
 	gem 'faker'
 	gem 'launchy'
 	gem 'meta_request'
+	gem 'pry-rails'
 	gem 'rails_layout'
 	gem 'rspec-rails'
-	gem 'spring'
-	gem 'web-console', '~> 2.0'
 	gem 'shoulda-matchers'
+	gem 'spring'
 	gem 'valid_attribute'
+	gem 'web-console', '~> 2.0'
+	gem 'email_spec'
 end
 
 

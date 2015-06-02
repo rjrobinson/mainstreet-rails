@@ -6,25 +6,35 @@ feature 'user creates a new account', %(
 	So I can create a pulls list
 ) do
 
-	# Acceptance Criteria
-	# Fill in email and password
-	# A new user account is created if the
-	# email isn't already in the database
-	# Password and password confirmation
-	# must match
-	# If I fill out the form incorrectly,
-	# errors are displayed.
 
 	scenario 'user signs up' do
 		visit root_path
 		click_link 'Sign up'
+		# Fill in information, and sign up.
+		fill_in 'Email', with: 'justatest@gmail.com'
+		fill_in 'Password', with: 'test12345', :match => :prefer_exact
+		fill_in 'Password confirmation', with: 'test12345', :match => :prefer_exact
 
-		fill_in 'Email', with: 'batman_rules@gmail.com'
-		fill_in 'Password', with: 'batcave99', :match => :prefer_exact
-		fill_in 'Password confirmation', with: 'batcave99', :match => :prefer_exact
 		click_button 'Sign up'
+		expect(page).to have_content("A message with a confirmation link has been sent to your email address.")
+		# An email will be generated, and sent. Retrive this by getting
+		# last email sent from action mailer.
 
-		expect(page).to have_content("Welcome! You have signed up successfully.")
+		user_email = ActionMailer::Base.deliveries.last
+
+		# Parse through to see if it is the correct email.
+		expect(user_email).to have_content("You can confirm your account email through the link below")
+
+		# Pull in the New User Info
+		user = User.find_by_email('justatest@gmail.com')
+		user.should_not be_nil
+		user.confirmation_token.should_not be_nil
+
+		ctoken = user_email.body.match(/confirmation_token=\w*/)
+
+		visit "/users/confirmation?#{ctoken}"
+
+		expect(page).to have_content("Your email address has been successfully confirmed")
 
 	end
 
