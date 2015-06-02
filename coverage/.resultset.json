@@ -1,0 +1,21 @@
+{
+  "RSpec": {
+    "coverage": {
+      "/Users/RJ/Dropbox/dev-projects/mainstreet-rails/app/controllers/welcome_controller.rb": [
+        1,
+        null,
+        1,
+        null,
+        null
+      ],
+      "/Users/RJ/Dropbox/dev-projects/mainstreet-rails/app/controllers/application_controller.rb": [
+        1,
+        null,
+        null,
+        1,
+        null
+      ]
+    },
+    "timestamp": 1433284983
+  }
+}

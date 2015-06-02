@@ -35,6 +35,8 @@ group :development, :test do
 	gem 'email_spec'
 end
 
+gem "codeclimate-test-reporter", group: :test, require: nil
+gem 'dotenv-rails', :groups => [:development, :test]
 
 # group :development, :test do
 # 	gem 'better_errors'
