@@ -15,6 +15,8 @@ gem 'foundation-rails'
 gem 'devise'
 gem 'owlcarousel-rails'
 gem 'rails_12factor'
+gem 'puma'
+
 
 # DEVELOPMENT AND TEST
 group :development, :test do

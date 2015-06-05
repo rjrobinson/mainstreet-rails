@@ -132,6 +132,8 @@ GEM
       slop (~> 3.4)
     pry-rails (0.3.3)
       pry (>= 0.9.10)
+    puma (2.11.3)
+      rack (>= 1.1, < 2.0)
     rack (1.6.1)
     rack-contrib (1.2.0)
       rack (>= 0.9.1)
@@ -260,6 +262,7 @@ DEPENDENCIES
   owlcarousel-rails
   pg
   pry-rails
+  puma
   rails (= 4.2.0)
   rails_12factor
   rails_layout
